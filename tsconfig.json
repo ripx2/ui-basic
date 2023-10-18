@@ -8,16 +8,16 @@
     "jsx": "react", /* Specify what JSX code is generated. */
     /* Modules */
     "module": "ESNext", /* Specify what module code is generated. */
+    "moduleResolution": "Node",
     "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
     "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
     "strict": true, /* Enable all strict type-checking options. */
     "noImplicitAny": true, /* Enable error reporting for expressions and declarations with an implied 'any' type. */
-    "skipLibCheck": true, /* Skip type checking all .d.ts files. */
-    "outDir": "dist",
-    "declaration": true,
-    "declarationMap": true
+    "skipLibCheck": true,
   },
   "include": [
-    "src/**/*.ts"
-, "src/Dummy/index.tsx"  ],
+    "src/**/*.ts",
+    "src/**/.tsx",
+    "declaration.d.ts"
+  ],
 }
