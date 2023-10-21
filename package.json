@@ -2,9 +2,10 @@
   "name": "@ripx/ui-basic",
   "version": "1.1.0",
   "description": "Basic UI for React",
-  "main": "dist/cjs/index.js",
   "type": "module",
+  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && rollup -c"
   },
@@ -17,8 +18,15 @@
   "author": "Ricardo Bermudez, Jorge Narvaez",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-sucrase": "^5.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@types/react": "18.2.28",
+    "autoprefixer": "^10.4.16",
     "rollup": "4.1.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript": "^1.0.1",
     "tslib": "^1.9.3",
     "typescript": "^3.2.2"
