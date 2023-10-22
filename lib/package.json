@@ -3,11 +3,11 @@
   "version": "1.1.0",
   "description": "Basic UI for React",
   "type": "module",
-  "main": "dist/esm/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "main": "esm/index.js",
+  "module": "esm/index.js",
+  "types": "esm/index.d.ts",
   "scripts": {
-    "build": "rollup -c && cp dist/esm/index.css ./styles.css"
+    "build": "rollup -c"
   },
   "keywords": [
     "react",
@@ -23,7 +23,6 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@types/react": "18.2.28",
     "autoprefixer": "^10.4.16",
     "rollup": "4.1.4",
     "rollup-plugin-postcss-modules": "^2.1.1",
@@ -31,7 +30,8 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "react": "*"
+    "react": "*",
+    "@types/react": "*"
   },
   "dependencies": {
     "classnames": "^2.3.2"
