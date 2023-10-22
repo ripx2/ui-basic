@@ -3,11 +3,11 @@
   "version": "1.1.0",
   "description": "Basic UI for React",
   "type": "module",
-  "main": "dist/cjs/index.js",
+  "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && rollup -c"
+    "build": "rollup -c && cp dist/esm/index.css ./styles.css"
   },
   "keywords": [
     "react",
@@ -19,18 +19,21 @@
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-sucrase": "^5.0.2",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/react": "18.2.28",
     "autoprefixer": "^10.4.16",
     "rollup": "4.1.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "tslib": "^1.9.3",
+    "rollup-plugin-postcss-modules": "^2.1.1",
+    "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "react": "*"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
   }
 }

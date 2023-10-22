@@ -1,15 +1,16 @@
 {
   "name": "@ripx/ui-basic",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "",
-  "main": "lib/dist/cjs/index.js",
+  "type": "module",
+  "main": "lib/dist/esm/index.js",
   "module": "lib/dist/esm/index.js",
   "types": "lib/dist/esm/index.d.ts",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "build:lib": "npm run build --workspace=lib",
+    "build:lib": "npm run build --workspace=lib && cp lib/dist/esm/index.css ./styles.css",
     "start:docs": "npm run dev --workspace=docs"
   },
   "author": "",
@@ -18,11 +19,8 @@
     "lib",
     "docs"
   ],
-  "dependencies": {
-   "@ripx/ui-basic-lib": "*"
-  },
-  "devDependencies": {
-    "@ripx/ui-basic-docs": "*"
-  },
-  "files": ["lib/dist"]
+  "files": [
+    "lib/dist",
+    "styles.css"
+  ]
 }
